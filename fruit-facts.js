@@ -52,6 +52,24 @@ const FRUIT_FACTS = {
       "Supports skin health"
     ],
     season: "Peak season from November to March"
+  },
+  kiwi: {
+    nutrition: {
+      calories: "61 kcal",
+      fiber: "3g",
+      vitamin_c: "85% DV"
+    },
+    facts: [
+      "Kiwis have more vitamin C than oranges!",
+      "You can eat the fuzzy skin - it's packed with nutrients",
+      "Originally called Chinese gooseberries before being renamed"
+    ],
+    benefits: [
+      "Excellent source of vitamin C",
+      "Supports digestive health",
+      "Rich in antioxidants and potassium"
+    ],
+    season: "Available year-round, peak season October to May"
   }
 };
 

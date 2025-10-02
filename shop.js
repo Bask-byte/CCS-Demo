@@ -2,6 +2,7 @@ const PRODUCTS = {
   apple: { name: "Apple", emoji: "🍏", price: 0.50 },
   banana: { name: "Individual Banana", emoji: "🍌", price: 0.75 },
   lemon: { name: "Lemon", emoji: "🍋", price: 0.60 },
+  kiwi: { name: "Kiwi", emoji: "🥝", price: 0.85 },
 };
 
 const BUNDLES = {

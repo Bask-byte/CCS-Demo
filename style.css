@@ -703,6 +703,69 @@ input[type="text"]:focus {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Contact Page Styles */
+.contact-info {
+  margin: 2rem 0;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.contact-item {
+  background: #f7faff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-item h3 {
+  color: #222;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+}
+
+.contact-item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+.contact-item a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.map-section {
+  margin: 3rem 0 2rem 0;
+  text-align: center;
+}
+
+.map-section h3 {
+  color: #222;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 1rem;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fresh Banana - Fruit Shop</title>
+    <title>Fresh Kiwi - Fruit Shop</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -45,27 +45,18 @@
     </header>
     <main id="main-content" role="main">
       <div class="content-box" style="text-align: center">
-        <div class="banana-display" role="img" aria-label="Individual banana with price tag">
-          <div class="banana-with-string">
-            <div class="string"></div>
-            <div style="font-size: 4rem">🍌</div>
-          </div>
-          <div class="price-tag">
-            <div class="price-tag-content">
-              <div class="price">€0.75</div>
-              <div class="per-piece">per piece</div>
-            </div>
-          </div>
+        <div style="font-size: 4rem" role="img" aria-label="Kiwi emoji">
+          🥝
         </div>
-        <h1>Individual Banana</h1>
+        <h1>Kiwi</h1>
         <div class="product-desc" aria-label="Product description">
-          Fresh individual banana with string and paper price tag. Nature's energy bar - now sold separately!
+          Sweet, tangy, and packed with vitamin C - a tropical delight!
         </div>
         <div style="margin-top: 1.2rem">
           <button
             id="addToBasket"
             class="cart-action-btn"
-            aria-label="Add Banana to basket"
+            aria-label="Add Kiwi to basket"
           >
             Add to Basket
           </button>
@@ -77,11 +68,11 @@
     <script src="fruit-facts.js"></script>
     <script>
       document.getElementById("addToBasket").onclick = function () {
-        addToBasket("banana");
+        addToBasket("kiwi");
       };
       
       // Add facts section
-      document.getElementById("factsContainer").innerHTML = createFactsSection("banana");
+      document.getElementById("factsContainer").innerHTML = createFactsSection("kiwi");
       initFactsCarousel();
     </script>
   </body>
