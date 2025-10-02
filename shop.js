@@ -1,7 +1,7 @@
 const PRODUCTS = {
-  apple: { name: "Apple", emoji: "🍏" },
-  banana: { name: "Banana", emoji: "🍌" },
-  lemon: { name: "Lemon", emoji: "🍋" },
+  apple: { name: "Apple", emoji: "🍏", price: 0.50 },
+  banana: { name: "Individual Banana", emoji: "🍌", price: 0.75 },
+  lemon: { name: "Lemon", emoji: "🍋", price: 0.60 },
 };
 
 const BUNDLES = {
@@ -76,7 +76,8 @@ function renderBasket() {
       const product = PRODUCTS[item];
       if (product) {
         const li = document.createElement("li");
-        li.innerHTML = `<span class='basket-emoji'>${product.emoji}</span> <span>${product.name}</span>`;
+        const priceText = product.price ? ` - €${product.price.toFixed(2)}` : '';
+        li.innerHTML = `<span class='basket-emoji'>${product.emoji}</span> <span>${product.name}${priceText}</span>`;
         basketList.appendChild(li);
       }
     }
