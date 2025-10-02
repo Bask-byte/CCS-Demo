@@ -6,7 +6,9 @@ const globalStats = {
     personalityDistribution: {
         banana: 0,
         apple: 0,
-        lemon: 0
+        lemon: 0,
+        orange: 0,
+        strawberry: 0
     },
     impactStats: {
         treesPlanted: 0,
@@ -51,6 +53,22 @@ const quizQuestions = [
             { text: "Inspiring others to change", personality: "lemon", impact: "socialInfluence" }
         ],
         fact: "Amazing fact: Individual actions, when multiplied, create significant environmental impact!"
+    },
+    {
+        question: "What's your ideal vacation?",
+        options: [
+            { text: "A sunny beach resort", personality: "orange", impact: "ecoTourism" },
+            { text: "A cozy cabin in the woods", personality: "strawberry", impact: "natureConservation" }
+        ],
+        fact: "Did you know? Eco-tourism can help protect natural habitats and support local communities."
+    },
+    {
+        question: "How do you handle stress?",
+        options: [
+            { text: "By socializing with friends", personality: "orange", impact: "communitySupport" },
+            { text: "By enjoying some quiet time alone", personality: "strawberry", impact: "mentalWellness" }
+        ],
+        fact: "Spending time in nature has been shown to reduce stress and improve mental well-being."
     }
 ];
 
@@ -99,6 +117,36 @@ const fruitPersonalities = {
             action: "Using whole lemons reduces food waste and maximizes environmental benefits."
         },
         seasonalTip: getCurrentSeasonTip('lemon')
+    },
+    orange: {
+        name: "Cheerful Orange",
+        description: "You're a social butterfly, bringing sunshine and positivity wherever you go. Like an orange, you're vibrant and full of life.",
+        recommendations: ["Citrus Lovers Bundle", "Sunshine Bundle"],
+        healthBenefits: [
+            "Packed with Vitamin C",
+            "Boosts your immune system",
+            "Promotes healthy skin"
+        ],
+        environmentalImpact: {
+            positive: "Orange peels can be composted to enrich soil!",
+            action: "Choosing locally grown oranges reduces your carbon footprint."
+        },
+        seasonalTip: getCurrentSeasonTip('orange')
+    },
+    strawberry: {
+        name: "Sweet Strawberry",
+        description: "You are sweet, caring, and enjoy the simple pleasures in life. Like a strawberry, you bring a touch of sweetness to every moment.",
+        recommendations: ["Berry Bash Bundle", "Healthy Mix Bundle"],
+        healthBenefits: [
+            "Rich in antioxidants and vitamins",
+            "Supports heart health",
+            "Great for your skin"
+        ],
+        environmentalImpact: {
+            positive: "Strawberries are a great ground cover plant, preventing soil erosion.",
+            action: "Growing your own strawberries is a fun way to get fresh, organic fruit."
+        },
+        seasonalTip: getCurrentSeasonTip('strawberry')
     }
 };
 
@@ -106,7 +154,9 @@ let currentQuestion = 0;
 let personalityScores = {
     banana: 0,
     apple: 0,
-    lemon: 0
+    lemon: 0,
+    orange: 0,
+    strawberry: 0
 };
 let impactScore = 0;
 
@@ -130,6 +180,18 @@ function getCurrentSeasonTip(fruit) {
             summer: "Make fresh lemonade!",
             fall: "Great for immune system!",
             winter: "Peak citrus season!"
+        },
+        orange: {
+            spring: "A refreshing spring snack!",
+            summer: "Perfect for a summer fruit salad!",
+            fall: "A great source of Vitamin C for the colder months!",
+            winter: "Brighten up your winter with some citrus!"
+        },
+        strawberry: {
+            spring: "The perfect time to plant your own strawberries!",
+            summer: "Enjoy them fresh and juicy!",
+            fall: "A sweet treat to end the summer.",
+            winter: "Use frozen strawberries for smoothies!"
         }
     };
     return tips[fruit][season];
@@ -145,7 +207,7 @@ function getCurrentSeason() {
 
 function startQuiz() {
     currentQuestion = 0;
-    personalityScores = { banana: 0, apple: 0, lemon: 0 };
+    personalityScores = { banana: 0, apple: 0, lemon: 0, orange: 0, strawberry: 0 };
     impactScore = 0;
     displayQuestion();
     document.getElementById('quiz-start').style.display = 'none';
@@ -200,7 +262,11 @@ function calculateImpactScore(impact) {
         innovation: 12,
         directAction: 20,
         longTermPlanning: 18,
-        socialInfluence: 15
+        socialInfluence: 15,
+        ecoTourism: 14,
+        natureConservation: 16,
+        communitySupport: 13,
+        mentalWellness: 11
     };
     return impactScores[impact] || 0;
 }

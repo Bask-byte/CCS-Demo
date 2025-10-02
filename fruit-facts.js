@@ -52,6 +52,42 @@ const FRUIT_FACTS = {
       "Supports skin health"
     ],
     season: "Peak season from November to March"
+  },
+  orange: {
+    nutrition: {
+      calories: "62 kcal",
+      fiber: "3.1g",
+      vitamin_c: "93% DV"
+    },
+    facts: [
+      "Oranges are the largest citrus fruit in the world",
+      "Florida is the top orange producer in the United States",
+      "The color orange was named after the fruit"
+    ],
+    benefits: [
+      "Excellent source of Vitamin C",
+      "Promotes a healthy immune system",
+      "Rich in antioxidants"
+    ],
+    season: "Best from December to April"
+  },
+  strawberry: {
+    nutrition: {
+      calories: "49 kcal",
+      fiber: "3g",
+      vitamin_c: "149% DV"
+    },
+    facts: [
+      "On average, there are 200 seeds on every strawberry",
+      "Strawberries are the first fruit to ripen in the spring",
+      "They are a member of the rose family"
+    ],
+    benefits: [
+      "May improve heart health",
+      "Can help regulate blood sugar",
+      "High in antioxidants"
+    ],
+    season: "Peak season from April to June"
   }
 };
 
